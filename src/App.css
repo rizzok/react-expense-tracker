@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+h4 {
+    text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root {
+    width: 360px;
+}
+
+.header {
+    margin: 1rem 0 3rem;
+    text-align: center;
+}
+
+hr {
+
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: -2px 2px 6px -5px #666666;
+    border-radius: 3px;
+}
+
+.balance {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inc-exp {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.inc-exp__income,
+.inc-exp__expense {
+    padding: 1rem 2rem;
+}
+
+.inc-exp__income__amount,
+.inc-exp__expense__amount {
+    font-weight: 500;
+}
+
+.inc-exp__income__amount {
+    color: #058805;
+}
+
+.inc-exp__expense__amount {
+    color: #a80707;
+}
+
+.history {
+    margin-top: 2rem;
+}
+
+.history__element {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    margin-bottom: .8rem;
+}
+
+.transaction {
+    margin-top: 2rem;
+}
+
+form {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    height: 2rem;
+}
+
+button {
+    width: 100%;
+    background-color: #8779f9;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
 }
