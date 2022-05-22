@@ -15,6 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #f3f3f3;
+    color: #2e2d30;
 }
 
 h1,
@@ -72,25 +73,60 @@ hr {
 }
 
 .inc-exp__income__amount {
-    color: #058805;
+    color: #23c323;
 }
 
 .inc-exp__expense__amount {
-    color: #a80707;
+    color: #cb0f0f;
 }
 
-.history {
+.transaction-list {
     margin-top: 2rem;
 }
 
-.history__element {
-    display: flex;
-    justify-content: space-between;
+.transaction {
     padding: 0.7rem 1rem;
     margin-bottom: .8rem;
+    position: relative;
 }
 
-.transaction {
+.transaction .amount {
+    float: right;
+}
+
+.transaction--income {
+    border-right: 5px solid #23c323;
+}
+
+.transaction--expense {
+    border-right: 5px solid #cb0f0f;
+}
+
+.btn-delete-transaction:focus {
+    outline: 0;
+}
+
+.btn-delete-transaction {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.transaction:hover .btn-delete-transaction {
+    opacity: 1;
+}
+
+.add-transaction {
     margin-top: 2rem;
 }
 
@@ -110,10 +146,13 @@ form input {
     height: 2rem;
 }
 
-button {
+.btn-submit {
     width: 100%;
-    background-color: #8779f9;
+    background-color: #7b6ded;
     color: white;
     padding: 0.5rem 1rem;
     font-weight: bold;
+    border-radius: 3px;
+    border: unset;
+    box-shadow: -2px 2px 10px -4px #7b6ded;
 }

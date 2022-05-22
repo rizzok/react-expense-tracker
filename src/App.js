@@ -1,20 +1,21 @@
 import './App.css';
-import {Header} from "./Components/Header";
-import {Balance} from "./Components/Balance";
-import {Expense} from "./Components/Expense";
-import {History} from "./Components/History";
-import {Transaction} from "./Components/Transaction";
+import {Header} from "./components/Header";
+import {Balance} from "./components/Balance";
+import {IncomesExpenses} from "./components/IncomesExpenses";
+import {TransactionList} from "./components/TransactionList";
+import {AddTransaction} from "./components/AddTransaction";
+import {GlobalProvider} from "./context/GlobalState";
 
 function App() {
-  return (
-    <div>
-        <Header />
-        <Balance />
-        <Expense />
-        <History />
-        <Transaction />
-    </div>
-  );
+    return (
+        <GlobalProvider>
+            <Header />
+            <Balance />
+            <IncomesExpenses />
+            <TransactionList />
+            <AddTransaction />
+        </GlobalProvider>
+    );
 }
 
 export default App;
